@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0474A3D329A335FC00C81B5B /* VocabularyCardPackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A3D229A335FC00C81B5B /* VocabularyCardPackApp.swift */; };
-		0474A3D529A335FC00C81B5B /* DeckList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A3D429A335FC00C81B5B /* DeckList.swift */; };
+		0474A3D529A335FC00C81B5B /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A3D429A335FC00C81B5B /* DeckView.swift */; };
 		0474A3D729A3360100C81B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0474A3D629A3360100C81B5B /* Assets.xcassets */; };
 		0474A3DA29A3360100C81B5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0474A3D929A3360100C81B5B /* Preview Assets.xcassets */; };
 		0474A3E329A383CB00C81B5B /* VocabularyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A3E229A383CB00C81B5B /* VocabularyModel.swift */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		0474A3CF29A335FC00C81B5B /* VocabularyCardPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyCardPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0474A3D229A335FC00C81B5B /* VocabularyCardPackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyCardPackApp.swift; sourceTree = "<group>"; };
-		0474A3D429A335FC00C81B5B /* DeckList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckList.swift; sourceTree = "<group>"; };
+		0474A3D429A335FC00C81B5B /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
 		0474A3D629A3360100C81B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0474A3D929A3360100C81B5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0474A3E229A383CB00C81B5B /* VocabularyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyModel.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		0474A3E029A3839300C81B5B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0474A3D429A335FC00C81B5B /* DeckList.swift */,
+				0474A3D429A335FC00C81B5B /* DeckView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0474A3D529A335FC00C81B5B /* DeckList.swift in Sources */,
+				0474A3D529A335FC00C81B5B /* DeckView.swift in Sources */,
 				0474A3E329A383CB00C81B5B /* VocabularyModel.swift in Sources */,
 				0474A3D329A335FC00C81B5B /* VocabularyCardPackApp.swift in Sources */,
 			);
