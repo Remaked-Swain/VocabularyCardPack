@@ -12,42 +12,59 @@ struct DeckView: View {
     
     var body: some View {
         NavigationView {
-            List(deck.cardPacks) { cardPack in
-                DeckListCell(cardPack: cardPack)
+            ZStack {
+                if deck.cardPacks.isEmpty {
+                    EmptyDeckView()
+                }
+                
+                List(deck.cardPacks) { cardPack in
+                    DeckListCell(deck: deck)
+                }
             }
             .navigationTitle("덱")
             .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        
-                    }, label: {
-                        Image(systemName: "plus.app")
-                    })
+                Button(action: {
                     
-                    Button(action: {
-                        
-                    }, label: {
-                        Image(systemName: "list.bullet")
-                    })
-                }
+                }, label: {
+                    Image(systemName: "plus.app")
+                })
+                
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "list.bullet")
+                })
             }
         }
     }
 }
 
 struct DeckListCell: View {
-    let cardPack: VocaCardPack
+    let deck: Deck
     
     var body: some View {
         DisclosureGroup(content: {
-            ForEach(cardPack.cards, id: \.title) { voca in
-                Text(voca.title)
+            ForEach(deck.cardPacks) { cardPack in
+                Text(cardPack.cardPackName)
             }
         }, label: {
-            Text(cardPack.cardPackName)
+            Text(deck.deckName)
                 .bold()
                 .foregroundColor(Color.blue)
         })
+    }
+}
+
+struct EmptyDeckView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "zzz")
+                .resizable()
+                .frame(width: 60, height: 60)
+            Text("덱이 비어있습니다!")
+                .bold()
+                .padding()
+        }
     }
 }
 
