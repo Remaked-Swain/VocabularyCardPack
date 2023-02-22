@@ -9,24 +9,28 @@ import SwiftUI
 
 struct DeckView: View {
     @EnvironmentObject var deck: Deck
+    @State private var isPresented: Bool = false
     
     var body: some View {
         NavigationView {
             ZStack {
                 if deck.cardPacks.isEmpty {
                     EmptyDeckView()
-                }
-                
-                List(deck.cardPacks) { cardPack in
-                    DeckListCell(deck: deck)
+                } else {
+                    List(deck.cardPacks) { cardPack in
+                        DeckListCell(deck: deck)
+                    }
                 }
             }
             .navigationTitle("덱")
             .toolbar {
                 Button(action: {
-                    
+                    isPresented.toggle()
                 }, label: {
                     Image(systemName: "plus.app")
+                })
+                .sheet(isPresented: $isPresented, content: {
+                    EditCardPackView(isPresented: $isPresented)
                 })
                 
                 Button(action: {
@@ -35,6 +39,7 @@ struct DeckView: View {
                     Image(systemName: "list.bullet")
                 })
             }
+            
         }
     }
 }
@@ -65,6 +70,51 @@ struct EmptyDeckView: View {
                 .bold()
                 .padding()
         }
+    }
+}
+
+struct EditCardPackView: View {
+    @EnvironmentObject var deck: Deck
+    @State private var cardPackName: String = ""
+    @Binding var isPresented: Bool
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section(content: {
+                    TextField("카드팩 제목", text: $cardPackName, prompt: Text("카드팩의 제목을 정해주세요."))
+                }, header: {
+                    Text("카드팩 제목")
+                })
+            }
+            .navigationTitle("카드팩 추가")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(role: .cancel, action: {
+                        isPresented.toggle()
+                    }, label: {
+                        Text("취소")
+                    })
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        addCardPack()
+                        isPresented.toggle()
+                    }, label: {
+                        Text("저장")
+                    })
+                }
+            }
+        }
+    }
+    
+    func addCardPack() {
+        if cardPackName.isEmpty {
+            cardPackName = "새로운 카드팩"
+        }
+        
+        deck.addCardPack(VocaCardPack(cardPackName))
     }
 }
 

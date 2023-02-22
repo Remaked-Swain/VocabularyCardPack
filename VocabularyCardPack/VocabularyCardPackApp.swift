@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct VocabularyCardPackApp: App {
-    var deck = Deck("")
+    let deck = Deck("")
     
     var body: some Scene {
         WindowGroup {

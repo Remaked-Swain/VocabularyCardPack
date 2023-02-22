@@ -20,7 +20,7 @@ class VocaCardPack: Identifiable, ObservableObject {
     var cards: [Voca]
     
     init(_ cardPackName: String) {
-        self.cardPackName = cardPackName == "" ? "새로운 카드팩" : cardPackName
+        self.cardPackName = cardPackName
         self.cards = [Voca]()
     }
     
@@ -32,19 +32,17 @@ class VocaCardPack: Identifiable, ObservableObject {
 // Deck made of a few VocaCardPack object
 class Deck: Identifiable, ObservableObject {
     let id = UUID()
-    var deckName: String {
-        get {
-            return self.deckName
-        }
-        
-        set {
-            self.deckName = newValue
-        }
-    }
-    var cardPacks: [VocaCardPack]
+    var deckName: String
+    var cardPacks: [VocaCardPack] = [
+        VocaCardPack("sample1"),
+        VocaCardPack("sample2"),
+        VocaCardPack("sample3"),
+        VocaCardPack("sample4")
+    ]
     
     init(_ deckName: String) {
-        self.cardPacks = [VocaCardPack]()
+        self.deckName = deckName
+//        self.cardPacks = [VocaCardPack]()
     }
     
     func addCardPack(_ cardPack: VocaCardPack) {
