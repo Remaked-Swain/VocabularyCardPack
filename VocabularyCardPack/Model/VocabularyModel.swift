@@ -32,18 +32,7 @@ class VocaCardPack: Identifiable, ObservableObject {
 // Deck made of a few VocaCardPack object
 class Deck: Identifiable, ObservableObject {
     let id = UUID()
-    var deckName: String
-    var cardPacks: [VocaCardPack] = [
-        VocaCardPack("sample1"),
-        VocaCardPack("sample2"),
-        VocaCardPack("sample3"),
-        VocaCardPack("sample4")
-    ]
-    
-    init(_ deckName: String) {
-        self.deckName = deckName
-//        self.cardPacks = [VocaCardPack]()
-    }
+    var cardPacks = [VocaCardPack]()
     
     func addCardPack(_ cardPack: VocaCardPack) {
         self.cardPacks.append(cardPack)

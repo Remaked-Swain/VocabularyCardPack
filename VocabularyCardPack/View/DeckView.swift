@@ -17,8 +17,10 @@ struct DeckView: View {
                 if deck.cardPacks.isEmpty {
                     EmptyDeckView()
                 } else {
-                    List(deck.cardPacks) { cardPack in
-                        DeckListCell(deck: deck)
+                    ScrollView(.vertical) {
+                        ForEach(deck.cardPacks, id: \.id) { cardPack in
+                            DeckListCell(cardPack: cardPack)
+                        }
                     }
                 }
             }
@@ -45,18 +47,21 @@ struct DeckView: View {
 }
 
 struct DeckListCell: View {
-    let deck: Deck
+    let cardPack: VocaCardPack
     
     var body: some View {
-        DisclosureGroup(content: {
-            ForEach(deck.cardPacks) { cardPack in
+        ZStack {
+            RoundedRectangle(cornerRadius: 25)
+                .frame(width: 320, height: 120)
+                .foregroundColor(Color.secondary)
+            
+            VStack(alignment: .listRowSeparatorLeading) {
                 Text(cardPack.cardPackName)
+                    .font(.title2)
+                    .bold()
+                Text("카드 보유량: \(cardPack.cards.count)개")
             }
-        }, label: {
-            Text(deck.deckName)
-                .bold()
-                .foregroundColor(Color.blue)
-        })
+        }
     }
 }
 
@@ -75,14 +80,14 @@ struct EmptyDeckView: View {
 
 struct EditCardPackView: View {
     @EnvironmentObject var deck: Deck
-    @State private var cardPackName: String = ""
+    @State private var tmpCardPackName: String = ""
     @Binding var isPresented: Bool
     
     var body: some View {
         NavigationView {
             Form {
                 Section(content: {
-                    TextField("카드팩 제목", text: $cardPackName, prompt: Text("카드팩의 제목을 정해주세요."))
+                    TextField("카드팩 제목", text: $tmpCardPackName, prompt: Text("카드팩의 제목을 정해주세요."))
                 }, header: {
                     Text("카드팩 제목")
                 })
@@ -109,18 +114,18 @@ struct EditCardPackView: View {
         }
     }
     
-    func addCardPack() {
-        if cardPackName.isEmpty {
-            cardPackName = "새로운 카드팩"
+    private func addCardPack() {
+        if tmpCardPackName.isEmpty {
+            tmpCardPackName = "새로운 카드팩"
         }
         
-        deck.addCardPack(VocaCardPack(cardPackName))
+        deck.addCardPack(VocaCardPack(tmpCardPackName))
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         DeckView()
-            .environmentObject(Deck(""))
+            .environmentObject(Deck())
     }
 }
