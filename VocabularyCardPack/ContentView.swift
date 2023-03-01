@@ -9,7 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack {
+                HeaderView()
+                
+                TabView {
+                    Label("덱", systemImage: "rectangle.stack")
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "square.stack")
+                            .foregroundColor(.black)
+                    }
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "questionmark.square")
+                            .foregroundColor(.black)
+                    }
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "gearshape")
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+        }
     }
 }
 
