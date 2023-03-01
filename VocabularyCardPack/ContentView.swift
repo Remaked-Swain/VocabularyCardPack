@@ -14,28 +14,20 @@ struct ContentView: View {
                 HeaderView()
                 
                 TabView {
-                    Label("덱", systemImage: "rectangle.stack")
+                    DeckView()
+                        .tabItem {
+                            Label("덱", systemImage: "rectangle.stack")
+                        }
                     
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "square.stack")
-                            .foregroundColor(.black)
-                    }
+                    TestingView()
+                        .tabItem {
+                            Label("테스트", systemImage: "questionmark.square")
+                        }
                     
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "questionmark.square")
-                            .foregroundColor(.black)
-                    }
-                    
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "gearshape")
-                            .foregroundColor(.black)
-                    }
+                    SettingView()
+                        .tabItem {
+                            Label("설정", systemImage: "gearshape")
+                        }
                 }
             }
         }

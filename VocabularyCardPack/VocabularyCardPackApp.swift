@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct VocabularyCardPackApp: App {
+    let deck = Deck()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(deck)
         }
     }
 }

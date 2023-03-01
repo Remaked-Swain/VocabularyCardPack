@@ -13,6 +13,11 @@
 		0474A3D329A335FC00C81B5B /* VocabularyCardPackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A3D229A335FC00C81B5B /* VocabularyCardPackApp.swift */; };
 		0474A3D729A3360100C81B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0474A3D629A3360100C81B5B /* Assets.xcassets */; };
 		0474A3DA29A3360100C81B5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0474A3D929A3360100C81B5B /* Preview Assets.xcassets */; };
+		04F46CD729AF8B5200BFD67B /* DeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CD629AF8B5200BFD67B /* DeckView.swift */; };
+		04F46CDA29AF8BAF00BFD67B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CD929AF8BAF00BFD67B /* SettingView.swift */; };
+		04F46CDD29AF8BF700BFD67B /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CDC29AF8BF700BFD67B /* TestingView.swift */; };
+		04F46CDF29AF8CAB00BFD67B /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CDE29AF8CAB00BFD67B /* Deck.swift */; };
+		04F46CE329AF938B00BFD67B /* HeaderViewISectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CE229AF938B00BFD67B /* HeaderViewISectionItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		0474A3D229A335FC00C81B5B /* VocabularyCardPackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyCardPackApp.swift; sourceTree = "<group>"; };
 		0474A3D629A3360100C81B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0474A3D929A3360100C81B5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04F46CD629AF8B5200BFD67B /* DeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckView.swift; sourceTree = "<group>"; };
+		04F46CD929AF8BAF00BFD67B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		04F46CDC29AF8BF700BFD67B /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
+		04F46CDE29AF8CAB00BFD67B /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		04F46CE229AF938B00BFD67B /* HeaderViewISectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewISectionItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,8 +49,7 @@
 		04027B0229AF684A00DCC7C9 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
-				04027B0029AF683D00DCC7C9 /* HeaderView.swift */,
-				04027B0329AF6A2600DCC7C9 /* HeaderButtonSectionView.swift */,
+				04F46CE029AF928600BFD67B /* HeaderView */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -66,6 +75,7 @@
 			children = (
 				0474A3D229A335FC00C81B5B /* VocabularyCardPackApp.swift */,
 				04027AFE29AF65A800DCC7C9 /* ContentView.swift */,
+				04F46CE129AF92A700BFD67B /* TabViewInRootView */,
 				04027B0229AF684A00DCC7C9 /* ReusableView */,
 				0474A3E129A3839C00C81B5B /* Entities */,
 				04B4662D29A664AB00B5E437 /* CustomShape */,
@@ -86,6 +96,8 @@
 		0474A3E129A3839C00C81B5B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				04F46CDE29AF8CAB00BFD67B /* Deck.swift */,
+				04F46CE229AF938B00BFD67B /* HeaderViewISectionItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -95,6 +107,49 @@
 			children = (
 			);
 			path = CustomShape;
+			sourceTree = "<group>";
+		};
+		04F46CD529AF8B2E00BFD67B /* DeckView */ = {
+			isa = PBXGroup;
+			children = (
+				04F46CD629AF8B5200BFD67B /* DeckView.swift */,
+			);
+			path = DeckView;
+			sourceTree = "<group>";
+		};
+		04F46CD829AF8B9300BFD67B /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				04F46CD929AF8BAF00BFD67B /* SettingView.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		04F46CDB29AF8BE700BFD67B /* TestingView */ = {
+			isa = PBXGroup;
+			children = (
+				04F46CDC29AF8BF700BFD67B /* TestingView.swift */,
+			);
+			path = TestingView;
+			sourceTree = "<group>";
+		};
+		04F46CE029AF928600BFD67B /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				04027B0029AF683D00DCC7C9 /* HeaderView.swift */,
+				04027B0329AF6A2600DCC7C9 /* HeaderButtonSectionView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		04F46CE129AF92A700BFD67B /* TabViewInRootView */ = {
+			isa = PBXGroup;
+			children = (
+				04F46CD529AF8B2E00BFD67B /* DeckView */,
+				04F46CDB29AF8BE700BFD67B /* TestingView */,
+				04F46CD829AF8B9300BFD67B /* SettingView */,
+			);
+			path = TabViewInRootView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,10 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F46CD729AF8B5200BFD67B /* DeckView.swift in Sources */,
 				04027AFF29AF65A800DCC7C9 /* ContentView.swift in Sources */,
 				04027B0129AF683D00DCC7C9 /* HeaderView.swift in Sources */,
+				04F46CDA29AF8BAF00BFD67B /* SettingView.swift in Sources */,
+				04F46CDF29AF8CAB00BFD67B /* Deck.swift in Sources */,
 				04027B0429AF6A2600DCC7C9 /* HeaderButtonSectionView.swift in Sources */,
+				04F46CE329AF938B00BFD67B /* HeaderViewISectionItem.swift in Sources */,
 				0474A3D329A335FC00C81B5B /* VocabularyCardPackApp.swift in Sources */,
+				04F46CDD29AF8BF700BFD67B /* TestingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

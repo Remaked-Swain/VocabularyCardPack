@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @EnvironmentObject var deck: Deck
+    
     var body: some View {
         HStack {
-            Text("Deck Name")
+            Text(deck.deckTitle)
                 .font(.largeTitle)
                 .bold()
             Spacer()
@@ -23,5 +25,6 @@ struct HeaderView: View {
 struct MainHeaderView_Previews: PreviewProvider {
     static var previews: some View {
         HeaderView()
+            .environmentObject(Deck())
     }
 }
