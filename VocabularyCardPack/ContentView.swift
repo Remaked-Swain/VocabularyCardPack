@@ -18,16 +18,19 @@ struct ContentView: View {
                         .tabItem {
                             Label("덱", systemImage: "rectangle.stack")
                         }
+                        .tag(0)
                     
                     TestingView()
                         .tabItem {
                             Label("테스트", systemImage: "questionmark.square")
                         }
+                        .tag(1)
                     
                     SettingView()
                         .tabItem {
                             Label("설정", systemImage: "gearshape")
                         }
+                        .tag(2)
                 }
             }
         }
@@ -37,5 +40,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Deck())
     }
 }

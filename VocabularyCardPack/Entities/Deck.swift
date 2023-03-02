@@ -16,10 +16,19 @@ struct Card {
 class CardPack: Identifiable, ObservableObject {
     @Published var cards: [Card]
     let id: UUID
+    private var _cardPackTitle: String
+    var cardPackTitle: String {
+        get { return self._cardPackTitle }
+        set { self._cardPackTitle = newValue }
+    }
+    var count: Int {
+        return self.cards.count
+    }
     
-    init() {
+    init(_ cardPackTitle: String) {
         self.cards = [Card]()
         self.id = UUID()
+        self._cardPackTitle = cardPackTitle
     }
     
     func addCard(_ card: Card) {

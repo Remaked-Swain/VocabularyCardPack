@@ -17,7 +17,7 @@
 		04F46CDA29AF8BAF00BFD67B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CD929AF8BAF00BFD67B /* SettingView.swift */; };
 		04F46CDD29AF8BF700BFD67B /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CDC29AF8BF700BFD67B /* TestingView.swift */; };
 		04F46CDF29AF8CAB00BFD67B /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CDE29AF8CAB00BFD67B /* Deck.swift */; };
-		04F46CE329AF938B00BFD67B /* HeaderViewISectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CE229AF938B00BFD67B /* HeaderViewISectionItem.swift */; };
+		04F46CE729AF988600BFD67B /* DeckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F46CE629AF988600BFD67B /* DeckListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		04F46CD929AF8BAF00BFD67B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		04F46CDC29AF8BF700BFD67B /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
 		04F46CDE29AF8CAB00BFD67B /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
-		04F46CE229AF938B00BFD67B /* HeaderViewISectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewISectionItem.swift; sourceTree = "<group>"; };
+		04F46CE629AF988600BFD67B /* DeckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				04F46CDE29AF8CAB00BFD67B /* Deck.swift */,
-				04F46CE229AF938B00BFD67B /* HeaderViewISectionItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -113,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				04F46CD629AF8B5200BFD67B /* DeckView.swift */,
+				04F46CE629AF988600BFD67B /* DeckListItem.swift */,
 			);
 			path = DeckView;
 			sourceTree = "<group>";
@@ -228,7 +228,7 @@
 				04F46CDA29AF8BAF00BFD67B /* SettingView.swift in Sources */,
 				04F46CDF29AF8CAB00BFD67B /* Deck.swift in Sources */,
 				04027B0429AF6A2600DCC7C9 /* HeaderButtonSectionView.swift in Sources */,
-				04F46CE329AF938B00BFD67B /* HeaderViewISectionItem.swift in Sources */,
+				04F46CE729AF988600BFD67B /* DeckListItem.swift in Sources */,
 				0474A3D329A335FC00C81B5B /* VocabularyCardPackApp.swift in Sources */,
 				04F46CDD29AF8BF700BFD67B /* TestingView.swift in Sources */,
 			);

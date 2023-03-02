@@ -11,12 +11,19 @@ struct DeckView: View {
     @EnvironmentObject var deck: Deck
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVGrid(columns: [.init(), .init()]) {
+                ForEach(deck.cardPacks, id: \.id) { cardPack in
+                    DeckListItem(cardPack: cardPack)
+                }
+            }
+        }
     }
 }
 
 struct DeckView_Previews: PreviewProvider {
     static var previews: some View {
         DeckView()
+            .environmentObject(Deck())
     }
 }

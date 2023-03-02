@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HeaderButtonSectionView: View {
-    let buttonSystemNameList: [String]
+    let symbols = ["magnifyingglass", "square.and.pencil", "slider.horizontal.3"]
     
     var body: some View {
         HStack {
@@ -19,6 +19,6 @@ struct HeaderButtonSectionView: View {
 
 struct MainHeaderButtonSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderButtonSectionView(buttonSystemNameList: ["magnifyingglass", "square.and.pencil"])
+        HeaderButtonSectionView()
     }
 }
