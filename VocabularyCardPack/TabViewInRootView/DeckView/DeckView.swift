@@ -18,6 +18,7 @@ struct DeckView: View {
                 }
             }
         }
+        .padding()
     }
 }
 

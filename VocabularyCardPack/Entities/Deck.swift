@@ -26,7 +26,12 @@ class CardPack: Identifiable, ObservableObject {
     }
     
     init(_ cardPackTitle: String) {
-        self.cards = [Card]()
+        self.cards = [
+            Card(word: "단어1", mean: "의미1"),
+            Card(word: "단어2", mean: "의미2"),
+            Card(word: "단어3", mean: "의미3"),
+            Card(word: "단어4", mean: "의미4")
+        ]
         self.id = UUID()
         self._cardPackTitle = cardPackTitle
     }
@@ -45,7 +50,12 @@ class Deck: ObservableObject {
     }
     
     init() {
-        self.cardPacks = [CardPack]()
+        self.cardPacks = [
+            CardPack("카드팩1"),
+            CardPack("카드팩2"),
+            CardPack("카드팩3"),
+            CardPack("카드팩4")
+        ]
         _deckTitle = "나의 덱"
     }
     
