@@ -11,17 +11,19 @@ struct DeckListItem: View {
     let cardPack: CardPack
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25, style: .circular)
-                .font(.system(size: 30))
-                .foregroundColor(Color.secondary)
-                .frame(width: 160, height: 120)
-            
-            VStack(spacing: 20) {
-                Text(cardPack.cardPackTitle)
-                    .font(.title)
-                    .bold()
-                Text("카드 보유량: \(cardPack.cards.count)")
+        NavigationLink(destination: CardPackView()) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 25)
+                    .font(.system(size: 30))
+                    .foregroundColor(Color.secondary)
+                    .frame(width: 160, height: 120)
+                
+                VStack(spacing: 20) {
+                    Text(cardPack.cardPackTitle)
+                        .font(.title)
+                        .bold()
+                    Text("카드 보유량: \(cardPack.cards.count)")
+                }
             }
         }
         .padding()

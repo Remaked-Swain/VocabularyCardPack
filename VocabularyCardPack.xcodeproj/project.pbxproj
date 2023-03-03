@@ -10,6 +10,7 @@
 		04027AFF29AF65A800DCC7C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04027AFE29AF65A800DCC7C9 /* ContentView.swift */; };
 		04027B0129AF683D00DCC7C9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04027B0029AF683D00DCC7C9 /* HeaderView.swift */; };
 		04088B4D29B0EBB30031E2B7 /* HeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04088B4C29B0EBB30031E2B7 /* HeaderButton.swift */; };
+		0412D0FE29B22812001A51EE /* CardPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412D0FD29B22812001A51EE /* CardPackView.swift */; };
 		0474A3D329A335FC00C81B5B /* VocabularyCardPackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474A3D229A335FC00C81B5B /* VocabularyCardPackApp.swift */; };
 		0474A3D729A3360100C81B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0474A3D629A3360100C81B5B /* Assets.xcassets */; };
 		0474A3DA29A3360100C81B5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0474A3D929A3360100C81B5B /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		04027AFE29AF65A800DCC7C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04027B0029AF683D00DCC7C9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		04088B4C29B0EBB30031E2B7 /* HeaderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderButton.swift; sourceTree = "<group>"; };
+		0412D0FD29B22812001A51EE /* CardPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackView.swift; sourceTree = "<group>"; };
 		0474A3CF29A335FC00C81B5B /* VocabularyCardPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyCardPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0474A3D229A335FC00C81B5B /* VocabularyCardPackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyCardPackApp.swift; sourceTree = "<group>"; };
 		0474A3D629A3360100C81B5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				04F46CD629AF8B5200BFD67B /* DeckView.swift */,
 				04F46CE629AF988600BFD67B /* DeckListItem.swift */,
+				0412D0FD29B22812001A51EE /* CardPackView.swift */,
 			);
 			path = DeckView;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F46CD729AF8B5200BFD67B /* DeckView.swift in Sources */,
+				0412D0FE29B22812001A51EE /* CardPackView.swift in Sources */,
 				04027AFF29AF65A800DCC7C9 /* ContentView.swift in Sources */,
 				04027B0129AF683D00DCC7C9 /* HeaderView.swift in Sources */,
 				04F46CDA29AF8BAF00BFD67B /* SettingView.swift in Sources */,
