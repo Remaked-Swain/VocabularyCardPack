@@ -24,7 +24,9 @@ struct DeckView: View {
 
 struct DeckView_Previews: PreviewProvider {
     static var previews: some View {
-        DeckView()
-            .environmentObject(Deck())
+        NavigationView {
+            DeckView()
+                .environmentObject(Deck())
+        }
     }
 }

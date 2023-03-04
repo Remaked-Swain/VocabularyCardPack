@@ -15,11 +15,13 @@ struct ContentView: View {
             HeaderView(tabViewSelection: $tabViewSelection)
             
             TabView(selection: $tabViewSelection) {
-                DeckView()
-                    .tabItem {
-                        Label("덱", systemImage: "rectangle.stack")
-                    }
-                    .tag(TabViewSelection.deck)
+                NavigationView(content: {
+                    DeckView()
+                })
+                .tabItem {
+                    Label("덱", systemImage: "rectangle.stack")
+                }
+                .tag(TabViewSelection.deck)
                 
                 TestingView()
                     .tabItem {

@@ -11,13 +11,13 @@ struct DeckListItem: View {
     let cardPack: CardPack
     
     var body: some View {
-        NavigationLink(destination: CardPackView()) {
+        NavigationLink(destination: CardPackView(cardPack: cardPack)) {
             ZStack {
                 RoundedRectangle(cornerRadius: 25)
                     .font(.system(size: 30))
                     .foregroundColor(Color.secondary)
                     .frame(width: 160, height: 120)
-                
+
                 VStack(spacing: 20) {
                     Text(cardPack.cardPackTitle)
                         .font(.title)
@@ -27,6 +27,7 @@ struct DeckListItem: View {
             }
         }
         .padding()
+        .tint(Color.primary)
     }
 }
 
