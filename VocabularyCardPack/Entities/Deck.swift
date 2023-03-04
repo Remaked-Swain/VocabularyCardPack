@@ -8,7 +8,8 @@
 import Foundation
 
 // Deck Model
-struct Card {
+struct Card: Identifiable {
+    let id = UUID()
     var word: String
     var mean: String
 }

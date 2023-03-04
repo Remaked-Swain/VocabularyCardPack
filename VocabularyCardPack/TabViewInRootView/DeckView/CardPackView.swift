@@ -11,7 +11,10 @@ struct CardPackView: View {
     let cardPack: CardPack
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(cardPack.cards) { card in
+            Text(card.word)
+        }
+        .navigationTitle(cardPack.cardPackTitle)
     }
 }
 
